@@ -1,19 +1,10 @@
 # !git clone https://github.com/yoyololicon/pytorch-NMF
-
 import numpy as np
-import pandas as pd
-import sklearn #機械学習のライブラリ
-import urllib.request 
-import matplotlib.pyplot as plt
-from sklearn.metrics import mean_squared_error
 import os
 import torch
 import cv2
-import sympy as sym
 from torchnmf import NMF
 from PIL import Image
-from sklearn.decomposition import PCA #主成分分析器
-import numpy.linalg as LA
 
 import random
 path = "./drive/My Drive/man/sub"

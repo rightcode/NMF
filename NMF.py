@@ -17,7 +17,7 @@ def preserve_Reconstruct_img_addition(params,Q_image,img_path):
   pil_img.convert("L").save(img_path,"JPEG")
 
 # 基底と目標画像から適切なパラメータを推定する関数
-def train(params,Q_image,image):
+def train(params,Q_image,image,learning_rate):
   y = 0
   for i in range(Q_image.shape[0]):
     params[i] = torch.tensor(params[i],requires_grad=True)
@@ -74,7 +74,7 @@ def main():
 
   #100回パラメータを学習
   for loop in range(100):
-    params = train(params,Q_image,image)
+    params = train(params,Q_image,image,learning_rate)
 
   # pil_img = Image.fromarray(image*255)
   # pil_img.convert("L").save("./drive/My Drive/result_NMF/results_noize.jpg","JPEG") #ノイズ画像の保存

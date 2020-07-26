@@ -78,35 +78,3 @@ for i in range(Q_image.shape[0]):
   y += Q_image[i]*P[0][i]*255
 pil_img = Image.fromarray(y)
 pil_img.convert("L").save("./drive/My Drive/result_NMF/answer.jpg","JPEG")
-
-# !git clone https://github.com/yoyololicon/pytorch-NMF
-
-# import numpy as np
-# import pandas as pd
-# import sklearn #機械学習のライブラリ
-# import urllib.request 
-# import matplotlib.pyplot as plt
-# from sklearn.metrics import mean_squared_error
-# import os
-# import torch
-# import cv2
-# import sympy as sym
-# from torchnmf import NMF
-# from PIL import Image
-# from sklearn.decomposition import PCA #主成分分析器
-# import numpy.linalg as LA
-
-# import random
-# path = "./drive/My Drive/man/sub"
-# file = os.listdir(path)
-# size = len(file)
-# resize = (200,200)
-# n_components = 3000
-# parms_list = [0] * n_components
-# learning_rate = 0.001
-
-# for i in range(6000,size):
-#   print(i)
-#   y = cv2.resize(np.array(Image.open(path+"/"+file[i])), resize)
-#   pil_img = Image.fromarray(y)
-#   pil_img.convert("L").save(path+"/"+file[i],"JPEG") 
